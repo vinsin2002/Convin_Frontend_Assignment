@@ -45,7 +45,7 @@ function App() {
     <div className=' h-screen bg-gray-900 overflow-auto font-rubik '>
       <form onSubmit={submithandler} className= 'h-52 flex  flex-col sm:flex-row justify-center items-center flex-wrap' >
         <input type="text" name='carddata' id='carddata' value={data.carddata} onChange={handleInputs} placeholder='Enter card value' className='m-2 block h-8 w-auto rounded-md border-2 p-2 shadow-xl outline-none hover:border-blue-300 focus:border-blue-300 md:w-1/5 ' />
-        <input type="text" name='link' id='link' value={data.link} onChange={handleInputs} placeholder='Enter youtube link' className='m-2 block h-8 w-auto rounded-md border-2 p-2 shadow-xl outline-none hover:border-blue-300 focus:border-blue-300 md:w-1/5 ' />
+        <input type="text" name='link' id='link' value={data.link} onChange={handleInputs} placeholder='Enter youtube embeded link' className='m-2 block h-8 w-auto rounded-md border-2 p-2 shadow-xl outline-none hover:border-blue-300 focus:border-blue-300 md:w-1/5 ' />
         <select autoComplete='off' name="bucket" id='bucket' value={data.bucket} onChange={handleInputs} className='outline-none h-8 border-2 focus:border-blue-300 rounded-lg m-2'>
           <option >Select from below</option>
           <option >Entertainment Videos</option>

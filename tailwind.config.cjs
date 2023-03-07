@@ -10,5 +10,5 @@ module.exports = {
       rubik: ["Rubik","sans-serif"]
     }
   },
-  plugins: [],
+  plugins: [require("daisyui")],
 }
