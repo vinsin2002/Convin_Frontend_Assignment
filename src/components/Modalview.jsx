@@ -1,7 +1,18 @@
 import React from 'react'
 import Picit from '../assets/play.png'
 function Modalview(props) {
+  function getId(url) {
+    const regExp = /^.*(youtu.be\/|v\/|u\/\w\/|embed\/|watch\?v=|&v=)([^#&?]*).*/;
+    const match = url.match(regExp);
 
+    return (match && match[2].length === 11)
+      ? match[2]
+      : null;
+}
+    
+const videoId = getId(props.link);
+const urlfinal = "https://www.youtube.com/embed/'"+videoId+"'";
+const iframeMarkup = <iframe width="560" height="315" src={urlfinal} frameborder="0" allowfullscreen></iframe>;
   return (
     <div>
       {/* The button to open modal */}
@@ -11,7 +22,7 @@ function Modalview(props) {
       <input type="checkbox" id="my-modal-4" className="modal-toggle" />
       <label htmlFor="my-modal-4" className="modal cursor-pointer">
         <label className="modal-box relative flex justify-center items-center " htmlFor="">
-        <iframe width="560" height="315" src={props.link} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        {iframeMarkup}
         </label>
       </label>
     </div>
